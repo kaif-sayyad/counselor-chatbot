@@ -21,7 +21,7 @@ KNOWLEDGE_FILE = os.path.join(BASE_DIR, "knowledge.md")
 
 # Configuration from environment variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash").strip()
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash").strip()
 ALLOWED_ORIGINS_RAW = os.environ.get("ALLOWED_ORIGINS", "").strip()
 HUMAN_COUNSELLOR_URL = os.environ.get("HUMAN_COUNSELLOR_URL", "").strip()
 
@@ -261,7 +261,6 @@ def chat():
     )
 
     # Gemini REST API request payload
-    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
     gemini_payload = {
         "system_instruction": {
             "parts": [{"text": system_instruction_text}]
@@ -274,13 +273,47 @@ def chat():
         }
     }
 
+    # Build list of candidate models to ensure high availability
+    models_to_try = []
+    if GEMINI_MODEL:
+        models_to_try.append(GEMINI_MODEL)
+    for fallback in ["gemini-3.5-flash", "gemini-3.8-flash"]:
+        if fallback not in models_to_try:
+            models_to_try.append(fallback)
+
+    response = None
+    last_status = None
+    for model_name in models_to_try:
+        gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+        try:
+            resp = requests.post(
+                gemini_url,
+                json=gemini_payload,
+                headers={"Content-Type": "application/json"},
+                timeout=12
+            )
+            response = resp
+            last_status = resp.status_code
+            if resp.status_code == 200:
+                break
+            elif resp.status_code in (404, 503):
+                # Model not available or temporarily overloaded, fallback to next model
+                continue
+            else:
+                # Client or auth error (400, 403, 429), stop attempting
+                break
+        except requests.exceptions.Timeout:
+            continue
+        except requests.exceptions.RequestException:
+            break
+
     try:
-        response = requests.post(
-            gemini_url,
-            json=gemini_payload,
-            headers={"Content-Type": "application/json"},
-            timeout=14  # fits serverless function execution budget
-        )
+        if response is None:
+            return jsonify({
+                "reply": "Network error encountered while connecting to AI service. Please check your connection or connect with a human counsellor.",
+                "suggest_counsellor": True,
+                "counsellor_url": HUMAN_COUNSELLOR_URL or None
+            }), 200
 
         if response.status_code == 200:
             res_json = response.json()
