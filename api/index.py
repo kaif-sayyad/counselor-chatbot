@@ -28,7 +28,7 @@ logger = logging.getLogger("skillpath_counsellor")
 
 # Configuration from environment variables (Groq provider)
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "").strip()
-GROQ_MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3-32b").strip() or "qwen/qwen3-32b"
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "qwen/qwen3.8-27b").strip() or "qwen/qwen3.8-27b"
 ALLOWED_ORIGINS_RAW = os.environ.get("ALLOWED_ORIGINS", "").strip()
 HUMAN_COUNSELLOR_URL = os.environ.get("HUMAN_COUNSELLOR_URL", "").strip()
 
