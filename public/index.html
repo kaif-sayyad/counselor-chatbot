@@ -22,7 +22,10 @@
     <!-- Clean Header: Branding & Linguistic Option -->
     <header class="chat-header">
       <div class="header-branding">
-        <h1 id="header-title">SkillPath AI Counsellor</h1>
+        <div class="header-title-row">
+          <h1 id="header-title">SkillPath AI Counsellor</h1>
+          <span class="header-badge badge-offline" id="header-badge" aria-label="System mode">Checking...</span>
+        </div>
         <p id="header-subtitle">Vocational &amp; Skill Career Guidance</p>
       </div>
       <div class="header-actions">
@@ -61,6 +64,9 @@
           aria-label="Your question"
           required
         />
+        <button type="button" class="btn-voice" id="btn-voice" title="Voice Input" aria-label="Voice input">
+          🎙️
+        </button>
         <button type="submit" class="btn-send" id="btn-send" aria-label="Send">
           <span id="send-btn-text">Send</span>
           <span aria-hidden="true">➤</span>

@@ -1,34 +1,30 @@
 # SkillPath AI Counsellor
 
-> A simple, standalone AI career counselling chatbot web app powered by Google Gemini, designed for vocational education, ITI trades, apprenticeships, and polytechnic pathways for students and parents in India.
+> A resilient, standalone AI career counselling chatbot web app powered by Groq (Qwen model) with a multi-tier offline fallback chain, designed for vocational education, ITI trades, apprenticeships, and polytechnic pathways for students and parents in India.
 
 This project is designed to be deployed independently (e.g. on Vercel) and opened or embedded from the **SkillPath Family Counselling Portal**.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
 - **Empathetic & Simple Career Guidance**: Explains vocational qualifications and skill pathways in simple language (Class 6–8 reading level, no jargon).
+- **AI Provider — Groq with Qwen**: Powered by Groq's high-speed OpenAI-compatible completions API using `qwen/qwen3-32b` with reasoning tokens hidden.
 - **Strict Accuracy & Anti-Hallucination**:
   - Never invents statistics, placement percentages, specific salary figures, or course fees.
   - Transparently directs users to verified local data on the portal's Recommendations screen.
-  - Quotes numbers only from the verified `knowledge.md` file.
+  - Built-in **Number Guard**: Any unverified numbers in AI responses trigger an automatic fallback to verified knowledge base answers.
+- **Multi-Tier Relatable Fallback Chain**:
+  - The user never sees an error screen, blank reply, or raw error.
+  - **Tier 1 (Groq API)**: Short timeout with automatic single retry on network/5xx errors.
+  - **Tier 2 (Local FAQ Match)**: Searches 48+ bilingual FAQ entries from `knowledge/faq.json` using keyword and text similarity, returning the best answer plus 2 related suggestions.
+  - **Tier 3 (Concern Category Templates)**: Detects 8 key family concerns (*income, job security, social perception, career growth, safety, further education, training cost, local jobs*) and replies with warm, verified templates in English or Marathi.
+  - **Tier 4 (General Guidance & Chips)**: Returns a friendly message and clickable concern chips.
 - **Bilingual Support**: Fully fluent in **English** and **Marathi (मराठी)** with instant one-click toggle.
-- **Accessibility & Low-Literacy Friendly**:
+- **Accessibility & Voice Support**:
   - **Voice Input** (Web Speech API) supporting Indian English (`en-IN`) and Marathi (`mr-IN`).
   - **Read-Aloud Button (🔊)** on every response with speech synthesis.
-  - Text-size toggle (`A-` / `A` / `A+`).
-  - Government-portal visual identity: Navy (`#14305c`), Saffron (`#e8801a`), tricolour accent, high contrast, clean white cards.
-- **Common Parent Concern Chips**:
-  - 💰 Income
-  - 🏢 Job Security
-  - 👪 Social Perception
-  - 📈 Career Growth
-  - 🛡️ Workplace Safety
-  - 🎓 Further Education (NSQF levels, lateral entry to diploma & degree)
-  - 🧾 Training Cost
-  - 📍 Local Jobs
-- **Human Counsellor Handoff**: Dedicated handoff button and modal whenever parents need personalized help or local seat allocation.
+  - High-contrast visual identity: Navy (`#14305c`), Saffron (`#e8801a`), tricolour accent, clean cards.
 - **Embedding & Security**:
   - Configurable `ALLOWED_ORIGINS` for Content Security Policy (`frame-ancestors`) and CORS.
   - Safe against prompt-injections; rejects instruction tampering and API key queries.
@@ -42,35 +38,87 @@ This project is designed to be deployed independently (e.g. on Vercel) and opene
 ```
 skillpath-chatbot/
 ├── api/
-│   └── index.py        # Flask application (exports `app`), Gemini integration & security
+│   └── index.py            # Flask application, Groq completions, fallback chain & security
+├── knowledge/
+│   └── faq.json            # 48+ bilingual FAQ entries with keywords and verified answers
 ├── public/
-│   ├── index.html      # Responsive, accessible chat page
-│   ├── style.css       # Portal styling, theme, animations, and high contrast layout
-│   └── app.js          # Bilingual state, speech input/output, chips, and postMessage
-├── knowledge.md        # Verified facts file (NSQF levels, schemes, guidelines)
-├── requirements.txt    # Pinned minimal Python dependencies
-├── vercel.json         # Vercel serverless configuration and routing
-├── .env.example        # Template for environment variables
-└── README.md           # Documentation and integration guide
+│   ├── index.html          # Responsive, accessible chat interface
+│   ├── style.css           # Styling, themes, badges, chips, and animations
+│   └── app.js              # Bilingual state, speech input/output, chips, and postMessage
+├── knowledge.md            # Verified facts file (NSQF levels, schemes, guidelines)
+├── requirements.txt        # Pinned minimal Python dependencies (Flask, requests, python-dotenv)
+├── vercel.json             # Vercel serverless configuration and routing
+├── .env.example            # Template for environment variables
+└── README.md               # Documentation and integration guide
 ```
+
+---
+
+## ⚙️ Environment Variables
+
+Configure these variables server-side (in your `.env` file for local development or Vercel Environment Variables):
+
+| Variable | Required | Default | Description |
+| :--- | :---: | :---: | :--- |
+| `GROQ_API_KEY` | Recommended | `""` | Your Groq API key from [Groq Console](https://console.groq.com/). If missing or unavailable, the chatbot seamlessly operates in **Basic mode** using local knowledge. |
+| `GROQ_MODEL` | Optional | `qwen/qwen3-32b` | Groq chat model identifier (default: `qwen/qwen3-32b`). |
+| `ALLOWED_ORIGINS` | Optional | `""` | Comma-separated list of parent domains for CSP `frame-ancestors` and CORS (e.g. `https://skillpath-portal.vercel.app,http://localhost:3000`). |
+| `HUMAN_COUNSELLOR_URL` | Optional | `""` | Link to human counsellor scheduling or helpdesk. |
+
+> **Security Note**: Never expose API keys in frontend code, git commits, or client-side responses. The `/api/health` endpoint only reports `"mode": "groq"` or `"mode": "offline"` and never discloses the key.
+
+---
+
+## 🔄 How the Fallback Chain Works
+
+1. **Groq API Call**:
+   The backend sends the user query along with the system instruction and up to 10 previous messages to Groq with a 10-second timeout. If a network error, timeout, or 5xx occurs, it retries once.
+2. **Number Guard**:
+   If Groq returns a response containing numbers not present in the verified knowledge files (`knowledge.md` and `knowledge/faq.json`), the answer is rejected and replaced by a verified local answer.
+3. **Local FAQ Search (`knowledge/faq.json`)**:
+   If Groq fails, is rate-limited (429), unauthorized (401/403), or returns invalid output, the system matches the question against `knowledge/faq.json` using weighted keyword and token overlap in the user's language. It returns the verified answer and up to 2 related follow-up suggestions.
+4. **Concern Category Templates**:
+   If no exact FAQ matches, the system detects which of the 8 parent concerns is being asked (*income, job security, social perception, career growth, safety, further education, training cost, local jobs*) and replies with a warm, empathetic template in English or Marathi.
+5. **General Friendly Message & Chips**:
+   If no concern is detected, it responds with a reassuring message and displays the 8 concern chips so the user can easily explore.
+6. **Chat UI Presentation**:
+   When operating via fallback, the chat displays the answer normally with a subtle **"Basic mode"** badge. The user never encounters an error banner or blank response.
+
+---
+
+## 📝 How to Edit or Add Entries to `knowledge/faq.json`
+
+The file `knowledge/faq.json` contains structured question-and-answer pairs in JSON format:
+
+```json
+{
+  "id": "faq_49",
+  "concern": "income",
+  "keywords_en": ["salary", "starting wages", "earn"],
+  "keywords_mr": ["पगार", "उत्पन्न", "वेतन"],
+  "question": "What is the starting income after ITI?",
+  "answer_en": "Starting income depends on your trade and regional industry demand...",
+  "answer_mr": "आयटीआय नंतर मिळणारे उत्पन्न निवडलेला ट्रेड आणि स्थानिक मागणीवर अवलंबून असते..."
+}
+```
+
+To add or update an entry:
+1. Open [knowledge/faq.json](file:///knowledge/faq.json).
+2. Add a new object with unique `id`, `concern` category, keyword lists in English (`keywords_en`) and Marathi (`keywords_mr`), the question text, and verified responses (`answer_en`, `answer_mr`).
+3. Ensure no invented numbers or false guarantees are added.
+4. Save the file. The changes are loaded immediately on the next request without needing a server rebuild.
 
 ---
 
 ## 🛠️ Local Development
 
-### 1. Prerequisites
-- Python 3.10+ (tested up to 3.13)
-- A Google Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
-
-### 2. Setup Environment
+### 1. Setup Environment
 ```bash
 # Clone the repository and enter directory
-cd skillpath-chatbot
+cd counselor-chatbot
 
-# Create a virtual environment (optional but recommended)
+# Create and activate a virtual environment
 python -m venv venv
-
-# Activate the virtual environment
 # Windows (PowerShell):
 .\venv\Scripts\Activate.ps1
 # macOS/Linux:
@@ -80,100 +128,46 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
+### 2. Configure Environment Variables
 Copy `.env.example` to `.env`:
 ```bash
 copy .env.example .env
 ```
-Edit `.env` with your actual Gemini API key:
+Edit `.env`:
 ```ini
-GEMINI_API_KEY=AIzaSy...your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
+GROQ_API_KEY=gsk_your_groq_api_key_here
+GROQ_MODEL=qwen/qwen3-32b
 ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:5000
 HUMAN_COUNSELLOR_URL=https://skillpath-portal.example.com/counsellor
 ```
 
-### 4. Run the Application
+### 3. Run Application
 ```bash
 python api/index.py
 ```
-Or with Flask CLI:
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
+
+### 4. Run Test Suite
 ```bash
-flask --app api/index.py run --port 5000
+python -m unittest discover -s tests -v
 ```
-Open your browser at `http://127.0.0.1:5000`.
 
 ---
 
 ## ☁️ Deploying to Vercel
 
-1. Push this repository to GitHub, GitLab, or Bitbucket.
-2. Log in to [Vercel](https://vercel.com/) and click **"Add New Project"**.
-3. Import the repository.
-4. Under **Settings → Environment Variables**, add:
-   - `GEMINI_API_KEY`: Your Gemini API key.
-   - `GEMINI_MODEL`: `gemini-2.5-flash` (or your preferred model).
-   - `ALLOWED_ORIGINS`: Comma-separated domains of your main portal (e.g. `https://skillpath-portal.vercel.app`).
-   - `HUMAN_COUNSELLOR_URL`: Link to your human counsellor desk or booking screen (optional).
-5. Click **Deploy**. Vercel will build the serverless function and static assets automatically.
-
----
-
-## 🔗 Linking to the Main Portal
-
-The main project's **"AI Counsellor"** button can open the chatbot either in a new tab or embedded in an iframe or side panel.
-
-### 1. Plain Link (Opens in New Tab)
-```html
-<a
-  href="https://YOUR-CHATBOT.vercel.app/?lang=en&trade=Electrician&location=Nagpur"
-  target="_blank"
-  rel="noopener"
-  class="btn-ai-counsellor"
->
-  AI Counsellor
-</a>
-```
-
-### 2. Embedded Iframe
-> **Important**: When embedding in an iframe, the `allow="microphone"` attribute is **required** by modern browsers so the user can use voice speech recognition inside the frame.
-
-```html
-<iframe
-  src="https://YOUR-CHATBOT.vercel.app/?lang=en&trade=Electrician&location=Nagpur"
-  title="SkillPath AI Counsellor"
-  allow="microphone"
-  style="width: 100%; height: 600px; border: 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
-></iframe>
-```
-
-### 3. Dynamic Context via `postMessage`
-If the user selects a new trade or district on your main portal while the iframe is open, you can update the chatbot's context without reloading the page:
-
-```javascript
-const iframe = document.querySelector('iframe');
-iframe.contentWindow.postMessage({
-  type: 'SET_CONTEXT',
-  trade: 'Solar Technician',
-  location: 'Pune',
-  lang: 'mr'
-}, 'https://YOUR-CHATBOT.vercel.app');
-```
-
----
-
-## 📝 Updating `knowledge.md`
-
-`knowledge.md` is loaded dynamically on each request. You can add verified government schemes, stipend details, or NSQF updates to this file:
-1. Open `knowledge.md`.
-2. Add verified facts or trade guidelines under the appropriate heading.
-3. Save or redeploy.
-4. The AI Counsellor will immediately incorporate these facts and may quote numbers from this section.
-
----
-
-## 🛡️ Rate Limiting & Privacy Note
-
-- **Rate Limiting**: Includes built-in sliding-window rate limiting per IP (25 requests/minute).
-  *Note on Serverless*: Because Vercel serverless instances are stateless and do not share in-memory state across multiple concurrent worker instances, this provides per-instance protection. If distributed persistent rate limiting across all instances is required in production, an external Redis store (such as Upstash Redis or Supabase) can easily be integrated.
-- **Privacy First**: Conversations and user messages are never stored in databases or logged to console logs. No personal student identifiers are requested or retained.
+1. Commit and push your changes to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "Switch chatbot to Groq Qwen and add offline fallback answers"
+   git push origin main
+   ```
+2. In the [Vercel Dashboard](https://vercel.com/):
+   - Go to your Project **Settings → Environment Variables**.
+   - Add `GROQ_API_KEY` (your Groq API key).
+   - Add `GROQ_MODEL` with value `qwen/qwen3-32b`.
+   - Remove any previous AI provider keys and variables.
+   - Click **Redeploy** on the latest deployment if needed.
+3. Test the deployment:
+   - Check `GET https://<your-project>.vercel.app/api/health`
+   - Send a chat message via `POST https://<your-project>.vercel.app/api/chat`

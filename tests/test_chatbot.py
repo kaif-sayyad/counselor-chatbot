@@ -6,7 +6,7 @@ import sys
 # Ensure api directory is in python path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from api.index import app, build_system_instruction, check_rate_limit, _ip_requests
+from api.index import app, build_system_instruction, check_rate_limit, _ip_requests, extract_numbers, validate_number_guard
 
 
 class TestSkillPathChatbot(unittest.TestCase):
@@ -14,27 +14,52 @@ class TestSkillPathChatbot(unittest.TestCase):
         self.client = app.test_client()
 
     def test_health_check_unconfigured(self):
-        """GET /api/health returns configured: False when key is unset, without leaking keys."""
-        with app.app_context():
-            res = self.client.get("/api/health")
-            self.assertEqual(res.status_code, 200)
-            data = res.get_json()
-            self.assertEqual(data["status"], "ok")
-            self.assertIn("configured", data)
-            self.assertIn("model", data)
-            # Ensure no secret keys in payload
-            self.assertNotIn("key", json.dumps(data).lower())
-            self.assertNotIn("api_key", data)
+        """GET /api/health returns mode 'offline' and configured: False when key is unset, without leaking keys."""
+        import api.index as idx_module
+        old_key = idx_module.GROQ_API_KEY
+        try:
+            idx_module.GROQ_API_KEY = ""
+            with app.app_context():
+                res = self.client.get("/api/health")
+                self.assertEqual(res.status_code, 200)
+                data = res.get_json()
+                self.assertEqual(data["status"], "ok")
+                self.assertEqual(data["mode"], "offline")
+                self.assertFalse(data["configured"])
+                self.assertEqual(data["model"], "qwen/qwen3-32b")
+                # Ensure no secret keys in payload
+                self.assertNotIn("key", json.dumps(data).lower())
+                self.assertNotIn("api_key", data)
+        finally:
+            idx_module.GROQ_API_KEY = old_key
+
+    def test_health_check_configured(self):
+        """GET /api/health returns mode 'groq' and configured: True when key is set."""
+        import api.index as idx_module
+        old_key = idx_module.GROQ_API_KEY
+        try:
+            idx_module.GROQ_API_KEY = "gsk_test_mock_key_12345"
+            with app.app_context():
+                res = self.client.get("/api/health")
+                self.assertEqual(res.status_code, 200)
+                data = res.get_json()
+                self.assertEqual(data["mode"], "groq")
+                self.assertTrue(data["configured"])
+                self.assertNotIn("gsk_test", json.dumps(data))
+        finally:
+            idx_module.GROQ_API_KEY = old_key
 
     def test_static_routes(self):
         """Verify GET / serves index.html and static assets are accessible."""
         res_index = self.client.get("/")
         self.assertEqual(res_index.status_code, 200)
         self.assertIn(b"SkillPath AI Counsellor", res_index.data)
+        self.assertIn(b"header-badge", res_index.data)
 
         res_css = self.client.get("/style.css")
         self.assertEqual(res_css.status_code, 200)
         self.assertIn(b"--color-primary", res_css.data)
+        self.assertIn(b"badge-groq", res_css.data)
 
         res_js = self.client.get("/app.js")
         self.assertEqual(res_js.status_code, 200)
@@ -57,15 +82,14 @@ class TestSkillPathChatbot(unittest.TestCase):
         self.assertEqual(res.status_code, 204)
         self.assertIn("Access-Control-Allow-Methods", res.headers)
 
-    def test_chat_unconfigured_key_english(self):
-        """When key is not set, POST /api/chat returns friendly English guidance."""
-        # Ensure GEMINI_API_KEY is empty for this test
+    def test_chat_unconfigured_key_returns_local_answer(self):
+        """When key is not set, POST /api/chat returns relatable local answer with HTTP 200 and mode 'basic'."""
         import api.index as idx_module
-        old_key = idx_module.GEMINI_API_KEY
+        old_key = idx_module.GROQ_API_KEY
         try:
-            idx_module.GEMINI_API_KEY = ""
+            idx_module.GROQ_API_KEY = ""
             payload = {
-                "message": "What is ITI course?",
+                "message": "What is the starting income after ITI?",
                 "language": "en"
             }
             res = self.client.post(
@@ -75,34 +99,12 @@ class TestSkillPathChatbot(unittest.TestCase):
             )
             self.assertEqual(res.status_code, 200)
             data = res.get_json()
+            self.assertEqual(data.get("mode"), "basic")
             self.assertFalse(data.get("configured", True))
-            self.assertIn("not configured", data["reply"])
+            self.assertTrue(len(data["reply"]) > 20)
             self.assertTrue(data.get("suggest_counsellor"))
         finally:
-            idx_module.GEMINI_API_KEY = old_key
-
-    def test_chat_unconfigured_key_marathi(self):
-        """When key is not set and language is mr, returns friendly Marathi guidance."""
-        import api.index as idx_module
-        old_key = idx_module.GEMINI_API_KEY
-        try:
-            idx_module.GEMINI_API_KEY = ""
-            payload = {
-                "message": "इलेक्ट्रिशियन कोर्सबद्दल माहिती द्या",
-                "language": "mr"
-            }
-            res = self.client.post(
-                "/api/chat",
-                data=json.dumps(payload),
-                content_type="application/json"
-            )
-            self.assertEqual(res.status_code, 200)
-            data = res.get_json()
-            self.assertFalse(data.get("configured", True))
-            self.assertIn("कॉन्फिगर केलेली नाही", data["reply"])
-            self.assertTrue(data.get("suggest_counsellor"))
-        finally:
-            idx_module.GEMINI_API_KEY = old_key
+            idx_module.GROQ_API_KEY = old_key
 
     def test_message_validation(self):
         """Empty message should return 400."""
@@ -135,6 +137,18 @@ class TestSkillPathChatbot(unittest.TestCase):
 
         prompt_mr = build_system_instruction(language="mr")
         self.assertIn("Marathi", prompt_mr)
+
+    def test_number_guard_helpers(self):
+        """Verify number extraction and guard logic."""
+        nums = extract_numbers("NSQF Level 4 course with 2 years duration and १२ वीं")
+        self.assertIn("4", nums)
+        self.assertIn("2", nums)
+        self.assertIn("12", nums)
+
+        allowed = {"1", "2", "3", "4", "10", "12"}
+        self.assertTrue(validate_number_guard("Course has 2 years duration at level 4", allowed))
+        # An invented number not in allowed set (e.g. 25000)
+        self.assertFalse(validate_number_guard("Salary will be 25000 rupees", allowed))
 
 
 if __name__ == "__main__":

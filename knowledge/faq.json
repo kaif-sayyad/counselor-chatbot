@@ -1,0 +1,434 @@
+[
+  {
+    "id": "faq_01",
+    "concern": "income",
+    "keywords_en": ["salary", "starting income", "earn", "how much", "money", "wages", "pay"],
+    "keywords_mr": ["सुरुवातीचा पगार", "उत्पन्न", "कमाई", "किती पैसे", "वेतन", "मिळकत"],
+    "question": "How much can a student earn after completing a vocational or ITI course?",
+    "answer_en": "Starting income depends on your trade specialization, practical skill level, and industry demand in your district. Many graduates start with paid apprenticeships under NAPS to earn while learning, and wages increase steadily with technical certifications and experience. Verified local wage ranges can be viewed on the portal Recommendations screen.",
+    "answer_mr": "आयटीआय किंवा व्यावसायिक शिक्षणानंतर मिळणारे सुरुवातीचे उत्पन्न निवडलेला ट्रेड, प्रत्यक्ष कामाचे कौशल्य आणि स्थानिक उद्योगांमधील मागणीवर अवलंबून असते. अनेक विद्यार्थी शिकाऊ उमेदवारी (NAPS) द्वारे शिकत असतानाच विद्यावेतन मिळवणे सुरू करतात. अनुभवासह आणि उच्च प्रमाणपत्रांसह उत्पन्नात वाढ होते. अधिकृत स्थानिक आकडेवारी पोर्टलच्या Recommendations स्क्रीनवर पाहू शकता."
+  },
+  {
+    "id": "faq_02",
+    "concern": "income",
+    "keywords_en": ["apprentice stipend", "naps", "stipend", "paid training", "monthly stipend"],
+    "keywords_mr": ["शिकाऊ उमेदवारी भत्ता", "विद्यावेतन", "स्टायपेंड", "पगार शिकाऊ", "उमेदवारी"],
+    "question": "Do students get paid during an apprenticeship after ITI?",
+    "answer_en": "Yes, apprenticeships under the National Apprenticeship Promotion Scheme (NAPS) provide a monthly government-regulated stipend. Employers provide hands-on industry training while paying a stipend, with partial financial support from the government. Exact stipend slabs vary by trade and region.",
+    "answer_mr": "होय, राष्ट्रीय शिकाऊ उमेदवारी प्रोत्साहन योजनेअंतर्गत (NAPS) विद्यार्थ्यांना दरमहा शासकीय नियमांनुसार विद्यावेतन (Stipend) मिळते. उद्योग प्रत्यक्ष कामाचा अनुभव देतात आणि सरकारकडूनही याला सहाय्य मिळते. ट्रेड आणि कालावधीनुसार विद्यावेतनाची रक्कम निश्चित केली जाते."
+  },
+  {
+    "id": "faq_03",
+    "concern": "income",
+    "keywords_en": ["salary growth", "long term income", "earn more", "future salary", "wage increase"],
+    "keywords_mr": ["पगार वाढ", "भविष्यातील उत्पन्न", "जास्त कमाई", "वाढ", "पगार कसा वाढतो"],
+    "question": "Does income increase over time in vocational careers?",
+    "answer_en": "Yes, technical careers offer strong earning growth as hands-on expertise deepens. Technicians who obtain advanced NSQF certifications, become master craftsmen, or step into supervisory roles see steady income progression. Self-employed technicians also build their own client bases for higher earnings.",
+    "answer_mr": "होय, तांत्रिक क्षेत्रात अनुभवासह मिळकत सातत्याने वाढते. तंत्रज्ञ जसजसे प्रगत NSQF प्रमाणपत्र मिळवतात, पर्यवेक्षक (Supervisor) बनतात किंवा विशेष काम शिकतात, तसतसे उत्पन्न वाढते. अनेक जण स्वतःचा व्यवसाय सुरू करून आणखी चांगली कमाई करतात."
+  },
+  {
+    "id": "faq_04",
+    "concern": "income",
+    "keywords_en": ["self employment income", "own business", "shop", "contractor", "freelance earnings"],
+    "keywords_mr": ["स्वतःचा व्यवसाय", "दुकान", "कॉन्ट्रॅक्टर", "कमाई व्यवसाय", "स्वयंरोजगार उत्पन्न"],
+    "question": "Can a vocational certificate holder earn through self-employment or business?",
+    "answer_en": "Yes, trades such as electrician, plumber, automotive repair, welder, and RAC technician offer direct routes to self-employment, contracting, and service shops. Earnings in self-employment depend on service quality, local customer trust, and business management.",
+    "answer_mr": "होय, इलेक्ट्रिशियन, प्लंबर, ऑटोमोबाईल मेकॅनिक, वेल्डर आणि एसी मेकॅनिक यांसारख्या ट्रेडमध्ये स्वतःचा व्यवसाय सुरू करून उत्तम कमाई करता येते. यामध्ये कामाची गुणवत्ता आणि स्थानिक ग्राहकांचा विश्वास यानुसार उत्पन्न वाढवता येते."
+  },
+  {
+    "id": "faq_05",
+    "concern": "job security",
+    "keywords_en": ["job security", "permanent job", "stability", "secure job", "guarantee", "will i get a job"],
+    "keywords_mr": ["नोकरीची हमी", "स्थिर नोकरी", "कायम नोकरी", "सुरक्षितता", "नोकरी मिळेल का"],
+    "question": "Is a vocational career stable and secure for the future?",
+    "answer_en": "Technical skills remain in consistent demand across manufacturing, utilities, transport, and construction sectors. To ensure long-term stability, verify the training institute placement record, look for registered local industrial units, and continue upgrading to higher NSQF levels.",
+    "answer_mr": "उत्पादन, वीज, वाहतूक आणि बांधकाम यांसारख्या मूलभूत क्षेत्रांमध्ये कुशल तंत्रज्ञांची कायम गरज असते. करिअर स्थिर ठेवण्यासाठी संस्थेचे प्लेसमेंट रेकॉर्ड तपासणे, नोंदणीकृत उद्योगांशी संपर्क ठेवणे आणि पुढील NSQF स्तराचे कौशल्य शिकणे महत्त्वाचे ठरते."
+  },
+  {
+    "id": "faq_06",
+    "concern": "job security",
+    "keywords_en": ["government jobs", "railway", "drdo", "isro", "bhel", "ongc", "govt job after iti"],
+    "keywords_mr": ["सरकारी नोकरी", "रेल्वे", "महावितरण", "शासकीय नोकरी", "आयटीआय नंतर सरकारी"],
+    "question": "Are there government job opportunities after ITI or vocational courses?",
+    "answer_en": "Yes, Indian Railways, state electricity boards (such as Mahavitaran), defense workshops, DRDO, ISRO, and public sector undertakings regularly recruit ITI certificate holders for technician posts. Selection is based on competitive exams and trade tests.",
+    "answer_mr": "होय, भारतीय रेल्वे, राज्य वीज मंडळ (महावितरण), संरक्षण कार्यशाळा, आयुध निर्माण, आणि सार्वजनिक उपक्रमांमध्ये आयटीआय उत्तीर्ण उमेदवारांसाठी तंत्रज्ञ पदांची नियमित भरती निघते. यासाठी स्पर्धा परीक्षा आणि ट्रेड टेस्ट द्यावी लागते."
+  },
+  {
+    "id": "faq_07",
+    "concern": "job security",
+    "keywords_en": ["recession proof", "job loss", "layoff", "automation", "ai proof"],
+    "keywords_mr": ["मंदी", "नोकरी जाईल का", "ऑटोमेशन", "काम टिकेल का", "नोकरीचे नुकसान"],
+    "question": "Are vocational jobs affected by automation and economic slowdowns?",
+    "answer_en": "Hands-on practical jobs that require physical installation, repair, troubleshooting, and maintenance cannot be easily automated. While broader economy changes, core technical trades like electrical systems, tooling, and vehicle servicing have enduring daily necessity.",
+    "answer_mr": "प्रत्यक्ष दुरुस्ती, जोडणी आणि देखभाल (Maintenance) लागणाऱ्या तांत्रिक कामांची जागा यंत्रे किंवा ऑटोमेशन सहज घेऊ शकत नाहीत. त्यामुळे इलेक्ट्रिकल, मशिनरी आणि वाहन दुरुस्ती यांसारख्या कामांची दैनंदिन गरज कायम राहते."
+  },
+  {
+    "id": "faq_08",
+    "concern": "job security",
+    "keywords_en": ["what if no job", "unemployed", "placement failure", "did not get job"],
+    "keywords_mr": ["नोकरी नाही मिळाली तर", "बेरोजगार", "काम नाही मिळाले", "पुढील पर्याय"],
+    "question": "What if a student does not get placed immediately after completing the course?",
+    "answer_en": "Graduates who do not find immediate placement can enroll in a NAPS apprenticeship for industrial exposure, take lateral entry into the second year of a Polytechnic Diploma, or apply for state government self-employment loan schemes. Our human counsellor can also assist with local options.",
+    "answer_mr": "अभ्यासक्रम संपल्यावर लगेच नोकरी न मिळाल्यास विद्यार्थी NAPS अंतर्गत शिकाऊ उमेदवारी करू शकतात, थेट पॉलिटेक्निक डिप्लोमाच्या दुसऱ्या वर्षात प्रवेश घेऊ शकतात किंवा स्वयंरोजगार सुरू करू शकतात. स्थानिक पर्यायांसाठी आमच्या मानवी समुपदेशकांशी बोला."
+  },
+  {
+    "id": "faq_09",
+    "concern": "social perception",
+    "keywords_en": ["social perception", "society", "relatives", "status", "respect", "stigma", "shame"],
+    "keywords_mr": ["समाजाची दृष्टी", "नातेवाईक", "प्रतिष्ठा", "मान", "सन्मान", "लोक काय म्हणतील"],
+    "question": "How does society view vocational and technical qualifications?",
+    "answer_en": "While conventional mindsets historically favored traditional academic degrees, modern industries and communities increasingly value practical problem solvers. Certified technicians earn respect through their indispensable skills, financial self-reliance at an early age, and vertical mobility into engineering degrees.",
+    "answer_mr": "पूर्वी केवळ पारंपरिक पदव्यांना महत्त्व दिले जात असले, तरी आज प्रत्यक्ष काम जाणणाऱ्या कुशल तंत्रज्ञांना समाजात आणि उद्योगात मोठा मान मिळतो. कमी वयात स्वावलंबी होणे आणि प्रत्यक्ष कौशल्य असणे ही सन्मानाची बाब मानली जाते."
+  },
+  {
+    "id": "faq_10",
+    "concern": "social perception",
+    "keywords_en": ["iti vs degree respect", "is iti small", "inferior", "prestige"],
+    "keywords_mr": ["आयटीआय लहान आहे का", "कमी दर्जा", "पदवी श्रेष्ठ का", "प्रतिष्ठा तुलना"],
+    "question": "Is an ITI certificate considered inferior to an academic degree?",
+    "answer_en": "Neither pathway is inferior; they serve different purposes. Academic degrees emphasize theoretical theory, whereas ITI and vocational education build hands-on mastery for immediate industry roles. Under the National Credit Framework, vocational qualifications are officially recognized and seamlessly connect to diplomas and degrees.",
+    "answer_mr": "कोणताही मार्ग कमी किंवा जास्त नाही; दोन्हींची वैशिष्ट्ये वेगळी आहेत. पदवीमध्ये सैद्धांतिक ज्ञान मिळते, तर आयटीआयमध्ये प्रत्यक्ष कौशल्यावर भर दिला जातो. राष्ट्रीय क्रेडिट फ्रेमवर्कनुसार व्यावसायिक शिक्षणालाही पदवीइतकेच अधिकृत महत्त्व आणि पुढील शिक्षणाची संधी आहे."
+  },
+  {
+    "id": "faq_11",
+    "concern": "social perception",
+    "keywords_en": ["parents convincing", "relatives pressure", "family worry", "convince parents"],
+    "keywords_mr": ["पालकांची समजूत", "नातेवाईकांचा दबाव", "कुटुंबाची काळजी", "पालकांना कसे पटवावे"],
+    "question": "How can a student explain the value of vocational education to worried parents?",
+    "answer_en": "Focus on four clear points: early practical skill building, subsidized training costs, government apprenticeship stipends (NAPS), and the guaranteed lateral entry route into a Polytechnic diploma without losing academic years. Sharing verified placement examples from the portal also builds family confidence.",
+    "answer_mr": "पालकांना समजावण्यासाठी चार मुख्य गोष्टी सांगा: प्रत्यक्ष हाताने काम शिकणे, कमी शैक्षणिक खर्च, शिकाऊ उमेदवारीतून मिळणारे विद्यावेतन, आणि नंतर पॉलिटेक्निकच्या दुसऱ्या वर्षात थेट प्रवेश मिळण्याची सोय. यामुळे कुटुंबाचा आत्मविश्वास वाढतो."
+  },
+  {
+    "id": "faq_12",
+    "concern": "social perception",
+    "keywords_en": ["dignity of labour", "blue collar", "white collar", "technician status"],
+    "keywords_mr": ["श्रमाची प्रतिष्ठा", "कामाचा दर्जा", "तंत्रज्ञ पद", "आदर"],
+    "question": "What is the modern industry standing of skilled technicians?",
+    "answer_en": "Modern manufacturing, smart grids, renewable energy, and aerospace rely entirely on skilled technicians. These roles use computer numerical control (CNC), digital diagnostics, and precision machinery, making technical craftsmanship a proud, specialized, and highly respected profession.",
+    "answer_mr": "आधुनिक कारखाने, सौर ऊर्जा, सीएनसी (CNC) मशीन्स आणि डिजिटल तंत्रज्ञान पूर्णपणे कुशल तंत्रज्ञांवर चालतात. आजचे तंत्रज्ञ आधुनिक उपकरणांवर काम करतात, त्यामुळे या व्यवसायाला उद्योगांमध्ये सन्माननीय स्थान आहे."
+  },
+  {
+    "id": "faq_13",
+    "concern": "career growth",
+    "keywords_en": ["career growth", "promotion", "ladder", "future scope", "supervisor", "advancement"],
+    "keywords_mr": ["करिअर वाढ", "बढती", "भविष्य", "पर्यवेक्षक", "प्रगती"],
+    "question": "What does the long-term career growth ladder look like after a vocational course?",
+    "answer_en": "A graduate begins as an apprentice or junior technician, progresses to senior technician, and can become a shop floor supervisor or quality inspector. With lateral diploma or B.Voc completion, one can become an assistant engineer or technical plant manager.",
+    "answer_mr": "विद्यार्थी सुरुवातीला शिकाऊ किंवा कनिष्ठ तंत्रज्ञ म्हणून सुरुवात करतो, नंतर वरिष्ठ तंत्रज्ञ आणि शॉप-फ्लोर सुपरवायझर बनतो. पुढे डिप्लोमा किंवा बी.व्होक (B.Voc) पूर्ण केल्यास सहाय्यक अभियंता किंवा प्लांट मॅनेजर पदापर्यंत प्रगती करता येते."
+  },
+  {
+    "id": "faq_14",
+    "concern": "career growth",
+    "keywords_en": ["instructor", "cits", "teaching in iti", "craft instructor"],
+    "keywords_mr": ["शिक्षक", "आयटीआय शिक्षक", "सीआयटीएस", "प्रशिक्षक", "इन्स्ट्रक्टर"],
+    "question": "Can an ITI graduate become an instructor or teacher in an ITI?",
+    "answer_en": "Yes, an ITI graduate can complete the Crafts Instructor Training Scheme (CITS) at a National Skill Training Institute (NSTI). Upon finishing CITS, you become eligible for recruitment as a Craft Instructor in government and private ITIs.",
+    "answer_mr": "होय, आयटीआय उत्तीर्ण उमेदवार राष्ट्रीय कौशल्य प्रशिक्षण संस्थेतून (NSTI) क्राफ्ट इन्स्ट्रक्टर ट्रेनिंग स्कीम (CITS) पूर्ण करू शकतात. त्यानंतर शासकीय व खाजगी आयटीआयमध्ये शिल्प निदेशक (Instructor) पदासाठी अर्ज करता येतो."
+  },
+  {
+    "id": "faq_15",
+    "concern": "career growth",
+    "keywords_en": ["entrepreneurship", "start own workshop", "mudra loan", "business growth"],
+    "keywords_mr": ["उद्योजकता", "स्वतःचे वर्कशॉप", "मुद्रा कर्ज", "उद्योग सुरू करणे"],
+    "question": "What support is available if a vocational graduate wants to start their own workshop?",
+    "answer_en": "Government initiatives like PMEGP and MUDRA loans offer collateral-free business loans and capital subsidies to certified vocational technicians. Many state skill missions also provide entrepreneurship incubation and mentor guidance.",
+    "answer_mr": "प्रमाणित तंत्रज्ञांसाठी मुद्रा (MUDRA) आणि PMEGP सारख्या शासकीय योजनांमधून विनातारण कर्ज आणि अनुदान उपलब्ध होते. तसेच राज्य कौशल्य विकास संस्था उद्योजकतेला प्रोत्साहन देण्यासाठी मार्गदर्शन शिबिरे आयोजित करतात."
+  },
+  {
+    "id": "faq_16",
+    "concern": "career growth",
+    "keywords_en": ["foreign jobs", "gulf countries", "overseas employment", "work abroad"],
+    "keywords_mr": ["परदेशात नोकरी", "गल्फ", "दुबई", "विदेशात काम", "बाहेरच्या देशात"],
+    "question": "Can ITI certificate holders get jobs abroad or in Gulf countries?",
+    "answer_en": "Yes, trades like welder, pipe fitter, electrician, HVAC technician, and machinist are in continuous demand across Gulf countries and Southeast Asia. Certified NSQF qualifications with documented experience facilitate international recruitment through registered overseas agencies.",
+    "answer_mr": "होय, गल्फ देश आणि इतर परदेशांमध्ये वेल्डर, इलेक्ट्रिशियन, फिटर आणि एसी तंत्रज्ञांना मोठी मागणी असते. एनएसक्यूएफ (NSQF) प्रमाणित प्रमाणपत्र आणि कामाचा अनुभव असल्यास अधिकृत एजन्सीद्वारे परदेशात नोकरीच्या चांगल्या संधी मिळतात."
+  },
+  {
+    "id": "faq_17",
+    "concern": "safety",
+    "keywords_en": ["workplace safety", "danger", "hazard", "injury", "accident", "ppe", "protective gear"],
+    "keywords_mr": ["कामाची सुरक्षितता", "धोका", "अपघात", "सुरक्षित साधन", "पीपीई", "जखम"],
+    "question": "How safe is workshop training and technical work in industries?",
+    "answer_en": "Accredited ITIs and regulated industries teach industrial safety as an essential core subject from week one. Trainees must wear prescribed Personal Protective Equipment (PPE) such as safety boots, goggles, insulated gloves, and helmets, and follow strict machine protocols.",
+    "answer_mr": "मान्यताप्राप्त संस्थांमध्ये पहिल्याच आठवड्यापासून औद्योगिक सुरक्षिततेचे धडे दिले जातात. कार्यशाळेत सुरक्षा बूट, गॉगल, इन्सुलेटेड हातमोजे आणि हेल्मेट यांसारखी वैयक्तिक सुरक्षा साधने (PPE) वापरणे बंधनकारक असते."
+  },
+  {
+    "id": "faq_18",
+    "concern": "safety",
+    "keywords_en": ["electrical shock safety", "electrician hazard", "high voltage risk"],
+    "keywords_mr": ["विजेचा धक्का", "इलेक्ट्रिशियन धोका", "करंट", "विद्युत सुरक्षा"],
+    "question": "Are electrical and welding trades safe for young students?",
+    "answer_en": "Yes, when safety guidelines are strictly followed. Students first train on simulated de-energized circuits, earthing systems, and protective circuit breakers (MCBs/ELCBs) before touching real industrial systems. Safety culture is tested rigorously during examinations.",
+    "answer_mr": "होय, सुरक्षा नियमांचे पालन केल्यास हे व्यवसाय पूर्णपणे सुरक्षित आहेत. विद्यार्थ्यांना आधी बंद सर्किट, अर्थिंग आणि ईएलसीबी (ELCB) सुरक्षा प्रणालींवर प्रशिक्षण दिले जाते, जेणेकरून सुरक्षिततेची सवय अंगवळणी पडते."
+  },
+  {
+    "id": "faq_19",
+    "concern": "safety",
+    "keywords_en": ["safety for girls", "women in iti", "female students safety", "safe campus"],
+    "keywords_mr": ["मुलींसाठी सुरक्षा", "महिला आयटीआय", "मुलींचे शिक्षण सुरक्षित का", "कॅम्पस"],
+    "question": "Is vocational education safe and supportive for female students?",
+    "answer_en": "Yes, there are dedicated Government ITIs for Women (Women ITIs) in almost every district, as well as co-educational ITIs with separate amenities, internal committees, and women-reserved seats. Modern trades like electronics, COPA, drafting, and laboratory technology are very popular.",
+    "answer_mr": "होय, प्रत्येक जिल्ह्यात महिलांसाठी स्वतंत्र शासकीय आयटीआय (Women ITI) असतात, तसेच सर्वसाधारण संस्थांमध्येही मुलींसाठी राखीव जागा आणि स्वतंत्र सुविधा असतात. इलेक्ट्रॉनिक्स, कोपा (COPA) आणि ड्राफ्ट्समन यांसारखे ट्रेड्स मुलींमध्ये खूप लोकप्रिय आहेत."
+  },
+  {
+    "id": "faq_20",
+    "concern": "safety",
+    "keywords_en": ["factory insurance", "esi", "provident fund", "medical benefits"],
+    "keywords_mr": ["विमा", "ईएसआय", "वैद्यकीय सुविधा", "अपघात विमा", "पीएफ"],
+    "question": "Are workers in technical trades covered by medical insurance and welfare?",
+    "answer_en": "Registered industries and apprenticeships enroll employees under the Employees State Insurance (ESI) scheme and Employees Provident Fund (EPF), providing medical treatment, disability protection, and family security.",
+    "answer_mr": "नोंदणीकृत कारखान्यांमध्ये आणि शिकाऊ उमेदवारीत कामगारांना कर्मचारी राज्य विमा (ESIC) आणि भविष्य निर्वाह निधी (EPF) अंतर्गत मोफत वैद्यकीय उपचार आणि अपघात संरक्षण मिळते."
+  },
+  {
+    "id": "faq_21",
+    "concern": "further education",
+    "keywords_en": ["lateral entry", "diploma after iti", "polytechnic second year", "direct admission", "polytechnic entry"],
+    "keywords_mr": ["थेट प्रवेश", "डिप्लोमा प्रवेश", "पॉलिटेक्निक दुसरे वर्ष", "लॅटरल एंट्री", "पदविका"],
+    "question": "Can an ITI graduate get direct lateral entry into a Polytechnic Diploma?",
+    "answer_en": "Yes, candidates who pass a two-year ITI trade certificate (NSQF Level 4) are eligible for lateral entry directly into the second year of a 3-year Polytechnic Diploma in a corresponding branch. This saves one year of study.",
+    "answer_mr": "होय, दोन वर्षांचा आयटीआय ट्रेड (NSQF Level 4) उत्तीर्ण विद्यार्थ्यांना तंत्रनिकेतन (पॉलिटेक्निक) डिप्लोमाच्या थेट दुसऱ्या वर्षात प्रवेश (Lateral Entry) मिळतो. यामुळे विद्यार्थ्यांचे एक वर्ष वाचते."
+  },
+  {
+    "id": "faq_22",
+    "concern": "further education",
+    "keywords_en": ["degree after diploma", "btech after iti", "engineering degree", "b.tech lateral"],
+    "keywords_mr": ["डिप्लोमानंतर पदवी", "बीटेक", "इंजिनिअरिंग प्रवेश", "डिग्री", "अभियांत्रिकी"],
+    "question": "Can a vocational student eventually earn a B.Tech or engineering degree?",
+    "answer_en": "Yes, by progressing from ITI to a Polytechnic Diploma via lateral entry, the student becomes eligible for lateral entry directly into the second year of a 4-year B.E. or B.Tech engineering degree. Alternately, students can pursue a Bachelor of Vocation (B.Voc) degree.",
+    "answer_mr": "होय, आयटीआय नंतर थेट डिप्लोमाच्या दुसऱ्या वर्षात प्रवेश घेऊन आणि डिप्लोमा पूर्ण केल्यानंतर अभियांत्रिकी पदवीच्या (B.E./B.Tech) थेट दुसऱ्या वर्षात प्रवेश मिळतो. याशिवाय तीन वर्षांचा बी.व्होक (B.Voc) पदवी अभ्यासक्रमही करता येतो."
+  },
+  {
+    "id": "faq_23",
+    "concern": "further education",
+    "keywords_en": ["nsqf levels", "nsqf structure", "levels meaning", "nsqf mobility"],
+    "keywords_mr": ["एनएसक्यूएफ", "NSQF स्तर", "शिक्षण स्तर", "क्रेडिट फ्रेमवर्क"],
+    "question": "What are NSQF levels and how do they help student mobility?",
+    "answer_en": "The National Skills Qualifications Framework (NSQF) organizes qualifications from Level 1 to 10. ITI certificate courses sit at NSQF Level 3-4, Polytechnic diplomas at Level 5-6, and B.Voc/Engineering at Level 6-7. This framework guarantees credit equivalence and clear progression across institutions.",
+    "answer_mr": "राष्ट्रीय कौशल्य पात्रता फ्रेमवर्क (NSQF) शिक्षणाला १ ते १० स्तरांमध्ये विभागते. आयटीआय स्तर ३-४ वर, डिप्लोमा स्तर ५-६ वर आणि पदवी स्तर ६-७ वर असते. यामुळे प्रमाणपत्र, डिप्लोमा आणि पदवी यांमध्ये बदल करणे आणि पुढे शिकणे सोपे होते."
+  },
+  {
+    "id": "faq_24",
+    "concern": "further education",
+    "keywords_en": ["distance learning", "study while working", "night college", "part time diploma"],
+    "keywords_mr": ["नोकरी करत शिकणे", "दूरस्थ शिक्षण", "पार्ट टाईम", "काम आणि अभ्यास"],
+    "question": "Can a technician pursue further studies while working on a job?",
+    "answer_en": "Yes, many universities and polytechnics offer evening, part-time, or distance diploma and degree courses, including flexible work-integrated B.Voc degrees designed specifically for working technicians.",
+    "answer_mr": "होय, अनेक संस्था नोकरी करणाऱ्या तंत्रज्ञांसाठी संध्याकालीन (Evening) किंवा पार्ट-टाईम डिप्लोमा आणि बी.व्होक (B.Voc) अभ्यासक्रम चालवतात, ज्यामुळे काम करत असतानाही उच्च शिक्षण पूर्ण करता येते."
+  },
+  {
+    "id": "faq_25",
+    "concern": "training cost",
+    "keywords_en": ["training cost", "iti fees", "government iti cost", "how much fees", "affordable"],
+    "keywords_mr": ["शिक्षणाचा खर्च", "आयटीआय फी", "सरकारी फी", "किती खर्च येईल", "परवडेल का"],
+    "question": "What is the cost of studying in a Government ITI?",
+    "answer_en": "Government ITIs operate with heavily subsidized tuition fees, making them highly accessible for families from all backgrounds. The state government covers the majority of workshop and training expenses. Exact fee receipts and concessions should be verified on the state admission portal.",
+    "answer_mr": "शासकीय आयटीआयमध्ये सरकारकडून प्रचंड अनुदान दिले जात असल्याने शैक्षणिक फी अत्यंत माफक असते. कार्यशाळा आणि साहित्याचा खर्च शासन उचलते. अचूक फी तपशील राज्य प्रवेश पोर्टलवर (उदा. DVET महाराष्ट्र) तपासू शकता."
+  },
+  {
+    "id": "faq_26",
+    "concern": "training cost",
+    "keywords_en": ["scholarships", "freeship", "ebc", "sc st obc scholarship", "financial aid"],
+    "keywords_mr": ["शिष्यवृत्ती", "मागासवर्गीय सवलत", "ईबीसी", "आर्थिक मदत", "फी माफी"],
+    "question": "Are scholarships available for vocational and ITI students?",
+    "answer_en": "Yes, state and central governments provide scholarships for SC, ST, OBC, EWS, and minority trainees, along with tuition fee reimbursements. Hostels and tool-kit support are also available in many government institutions.",
+    "answer_mr": "होय, केंद्र आणि राज्य सरकारतर्फे अनुसूचित जाती, जमाती, ओबीसी, ईडब्ल्यूएस आणि अल्पसंख्याक विद्यार्थ्यांसाठी शिष्यवृत्ती आणि परीक्षा फी माफी उपलब्ध असते. शासकीय वसतिगृह आणि विद्यावेतन योजनांचाही लाभ मिळतो."
+  },
+  {
+    "id": "faq_27",
+    "concern": "training cost",
+    "keywords_en": ["private vs govt iti fees", "private iti cost", "fee difference"],
+    "keywords_mr": ["खाजगी आणि सरकारी फी", "खाजगी आयटीआय खर्च", "फी फरक"],
+    "question": "How do fees differ between Government and Private ITIs?",
+    "answer_en": "Government ITIs charge nominal, state-regulated subsidized fees, whereas private ITIs set independent fee structures approved by state regulatory committees. Both award the exact same National Trade Certificate (NTC) upon passing DGT examinations.",
+    "answer_mr": "सरकारी आयटीआयमध्ये अत्यल्प शासकीय फी असते, तर खाजगी आयटीआयमध्ये व्यवस्थापन व सुविधांनुसार काहीशी जास्त फी असते. मात्र दोन्हीकडील विद्यार्थ्यांना अखिल भारतीय परीक्षा उत्तीर्ण झाल्यावर एकसारखेच राष्ट्रीय व्यवसाय प्रमाणपत्र (NTC) मिळते."
+  },
+  {
+    "id": "faq_28",
+    "concern": "training cost",
+    "keywords_en": ["return on investment", "cost recovery", "quick recovery", "financial payback"],
+    "keywords_mr": ["खर्च परत मिळणे", "कमी खर्चात फायदा", "फायदेशीर शिक्षण"],
+    "question": "How quickly does a vocational education pay for itself?",
+    "answer_en": "Because the initial course duration is short (1 to 2 years) and fees are nominal, students can start earning a stipend during their apprenticeship soon after graduation, recovering their training expenses within months.",
+    "answer_mr": "अभ्यासक्रम १ ते २ वर्षांचा असल्याने आणि खर्च अत्यंत कमी असल्याने, शिक्षण संपताच शिकाऊ उमेदवारीतून मिळणाऱ्या भत्त्यातून केलेला खर्च अवघ्या काही महिन्यांत वसूल होतो आणि विद्यार्थी आर्थिकदृष्ट्या स्वावलंबी बनतो."
+  },
+  {
+    "id": "faq_29",
+    "concern": "local jobs",
+    "keywords_en": ["local jobs", "nearby employment", "same district", "hometown job", "village jobs"],
+    "keywords_mr": ["स्थानिक नोकरी", "जवळ काम", "आपल्या जिल्ह्यात", "गावात नोकरी", "हक्काचे काम"],
+    "question": "Can students find employment within their own district or nearby towns?",
+    "answer_en": "Yes, trades like electrician, auto mechanic, refrigeration mechanic, and welder have strong continuous demand in every district across small workshops, dealerships, local contractors, and rural service centers without requiring migration.",
+    "answer_mr": "होय, इलेक्ट्रिशियन, मोटार मेकॅनिक, वेल्डर आणि प्लंबर यांसारख्या कामांची गरज प्रत्येक तालुक्यात आणि जिल्ह्यात असते. स्थानिक गॅरेज, वीज कामे, सेवा केंद्र आणि स्थानिक उद्योगांमध्ये स्थलांतर न करताही काम मिळू शकते."
+  },
+  {
+    "id": "faq_30",
+    "concern": "local jobs",
+    "keywords_en": ["industrial areas", "midc", "industrial estates", "factory clusters"],
+    "keywords_mr": ["एमआयडीसी", "कारखाने", "औद्योगिक वसाहत", "MIDC काम"],
+    "question": "How do industrial zones (like MIDC) help local technical employment?",
+    "answer_en": "State industrial development corporations (like Maharashtra MIDC) host hundreds of manufacturing, engineering, and chemical units that source their technician pipeline directly from district ITIs through campus drives.",
+    "answer_mr": "प्रत्येक जिल्ह्यातील एमआयडीसी (MIDC) आणि औद्योगिक वसाहतींमधील कारखाने स्थानिक आयटीआयमधून थेट मुलांची निवड करतात. यामुळे स्थानिक पातळीवरच नियमित नोकरी मिळणे सोपे होते."
+  },
+  {
+    "id": "faq_31",
+    "concern": "local jobs",
+    "keywords_en": ["relocation necessity", "have to leave home", "migrate to big city", "stay with family"],
+    "keywords_mr": ["घर सोडावे लागेल का", "मोठ्या शहरात जावे लागेल का", "स्थलांतर आवश्यक का"],
+    "question": "Is it compulsory to relocate to large cities like Mumbai or Pune for work?",
+    "answer_en": "No, relocation is not mandatory. While metro industrial hubs offer large plant operations, tier-2 and tier-3 districts have thriving commercial markets, agro-industries, transport fleets, and self-employment opportunities.",
+    "answer_mr": "नाही, मोठ्या शहरात स्थलांतर करणे अजिबात बंधनकारक नाही. मोठ्या शहरांत मोठे उद्योग असले, तरी स्थानिक पातळीवर शेतीपूरक उद्योग, स्थानिक कारखाने आणि स्वतंत्र व्यवसाय करून कुटुंबासोबत राहता येते."
+  },
+  {
+    "id": "faq_32",
+    "concern": "local jobs",
+    "keywords_en": ["rural demand", "village technician", "tractor mechanic", "solar repair local"],
+    "keywords_mr": ["ग्रामीण भागातील मागणी", "ट्रॅक्टर मेकॅनिक", "सौर ऊर्जा दुरुस्ती", "गावात काम"],
+    "question": "Are there vocational opportunities in rural and agricultural areas?",
+    "answer_en": "Yes, trades such as diesel mechanic, tractor mechanic, pump technician, solar system installer, and electrician have massive demand in rural areas supporting modern farm machinery and micro-irrigation systems.",
+    "answer_mr": "होय, ट्रॅक्टर व डिझेल मेकॅनिक, सौर पंप तंत्रज्ञ आणि कृषी पंपांची दुरुस्ती करणाऱ्या कुशल कारागिरांची ग्रामीण भागात अत्यंत मोठी गरज आणि नियमित काम असते."
+  },
+  {
+    "id": "faq_33",
+    "concern": "how to choose a trade",
+    "keywords_en": ["how to choose a trade", "best trade", "which trade is good", "selection", "choose course"],
+    "keywords_mr": ["ट्रेड कसा निवडावा", "कोणता ट्रेड चांगला", "ट्रेड निवड", "उत्तम कोर्स कोणता"],
+    "question": "How should a student decide which ITI or vocational trade to choose?",
+    "answer_en": "Consider your personal strengths (practical hands-on work vs drawing or computer operations), local industries in your region, and whether you prefer workshop employment or self-employment. Using the SkillPath portal Recommendations tool helps match your interests with verified local options.",
+    "answer_mr": "आपली स्वतःची आवड (यंत्रांवर काम करणे, वायरिंग, कॉम्प्युटर की डिझायनिंग), परिसरातील उद्योगांचे स्वरूप आणि भविष्यात नोकरी करायची आहे की स्वतःचा व्यवसाय, यावर ट्रेड निवडावा. कौशल्यमार्ग पोर्टलवरील शिफारसी पाहून योग्य ट्रेड निवडता येतो."
+  },
+  {
+    "id": "faq_34",
+    "concern": "how to choose a trade",
+    "keywords_en": ["engineering trades vs non engineering", "types of trades", "fitter electrician vs copa"],
+    "keywords_mr": ["अभियांत्रिकी ट्रेड", "बिगर अभियांत्रिकी", "ट्रेडचे प्रकार", "इलेक्ट्रिशियन कोपा फरक"],
+    "question": "What is the difference between engineering and non-engineering trades?",
+    "answer_en": "Engineering trades (Electrician, Fitter, Turner, Machinist, Welder) involve machinery, physical systems, mathematics, and technical drawing. Non-engineering trades (COPA, Stenography, Fashion Design, Hospitality) focus on software, administration, and creative services.",
+    "answer_mr": "इंजिनिअरिंग ट्रेड्स (उदा. इलेक्ट्रिशियन, फिटर, टर्नर, वेल्डर) मध्ये यंत्रे, तांत्रिक रेखाटन आणि प्रॅक्टिकल कामावर भर असतो. बिगर-इंजिनिअरिंग ट्रेड्स (उदा. कोपा, स्टेनो, फॅशन डिझाइन) मध्ये कॉम्प्युटर, प्रशासन आणि सेवा क्षेत्राशी संबंधित कौशल्ये असतात."
+  },
+  {
+    "id": "faq_35",
+    "concern": "how to choose a trade",
+    "keywords_en": ["1 year vs 2 year trade", "trade duration", "one year course", "two year course"],
+    "keywords_mr": ["१ वर्षाचा ट्रेड", "२ वर्षाचा ट्रेड", "ट्रेडचा कालावधी", "कोणता चांगला"],
+    "question": "Should I pick a 1-year trade or a 2-year trade in ITI?",
+    "answer_en": "A 1-year trade (like Welder, Plumber, COPA) allows faster entry into earning and apprenticeships. A 2-year trade (like Electrician, Fitter, Machinist) provides deeper technical depth and qualifies directly for lateral entry into second-year Polytechnic Diplomas.",
+    "answer_mr": "१ वर्षाचा ट्रेड (उदा. वेल्डर, कोपा) पटकन पूर्ण होऊन लवकर काम मिळवण्यासाठी चांगला असतो. २ वर्षांचे ट्रेड्स (उदा. इलेक्ट्रिशियन, फिटर) तांत्रिकदृष्ट्या अधिक सखोल असतात आणि यानंतर थेट पॉलिटेक्निकच्या दुसऱ्या वर्षात प्रवेश घेता येतो."
+  },
+  {
+    "id": "faq_36",
+    "concern": "how to choose a trade",
+    "keywords_en": ["marks required", "eligibility", "10th pass", "8th pass trade"],
+    "keywords_mr": ["पात्रता", "१० वी पास", "८ वी पास ट्रेड", "टक्केवारी", "प्रवेश पात्रता"],
+    "question": "What are the basic educational qualifications needed to join an ITI trade?",
+    "answer_en": "Most popular engineering trades require passing Class 10 (SSC) with Science and Mathematics. Some service trades (such as Welder, Wireman, Carpenter) accept Class 8 pass candidates. Check specific trade eligibility on the state admission portal.",
+    "answer_mr": "बहुतांश प्रमुख ट्रेड्ससाठी १० वी (विज्ञान व गणितासह) उत्तीर्ण असणे आवश्यक असते. काही ट्रेड्ससाठी (उदा. वायरमन, वेल्डर, कारपेंटर) ८ वी उत्तीर्ण विद्यार्थीही पात्र ठरतात. अधिकृत माहितीसाठी राज्य प्रवेश नियम पहा."
+  },
+  {
+    "id": "faq_37",
+    "concern": "vocational vs academic",
+    "keywords_en": ["vocational vs academic", "degree or iti", "college vs iti", "which is better", "neutral comparison"],
+    "keywords_mr": ["कॉलेज की आयटीआय", "पदवी की कौशल्य", "दोन्हीतील फरक", "काय चांगले", "तुलना"],
+    "question": "Which is better: an academic degree (BA/BSc/BCom) or a vocational course (ITI/Polytechnic)?",
+    "answer_en": "Both pathways have distinct advantages and suit different goals. Academic degrees provide broad conceptual foundations suitable for civil services, management, and research. Vocational courses provide early practical mastery, job readiness, and financial self-reliance, with pathways to earn degrees later through lateral entry.",
+    "answer_mr": "दोन्ही मार्ग आपापल्या जागी उत्तम आहेत. पदवी शिक्षणामुळे स्पर्धा परीक्षा, संशोधन व सामान्य व्यवस्थापनासाठी पाया मिळतो; तर व्यावसायिक शिक्षणामुळे कमी वयात प्रत्यक्ष कौशल्य, लवकर रोजगार आणि आर्थिक स्वावलंबन मिळते. तसेच नंतर पदवी घेण्याची सोय उपलब्ध असतेच."
+  },
+  {
+    "id": "faq_38",
+    "concern": "vocational vs academic",
+    "keywords_en": ["cost comparison", "spending on college", "college fees vs iti", "money saving"],
+    "keywords_mr": ["खर्चाची तुलना", "कॉलेजचा खर्च", "कशात कमी खर्च"],
+    "question": "How does the financial investment compare between college degrees and vocational courses?",
+    "answer_en": "Vocational courses require significantly lower upfront fees and shorter study periods before earning begins through paid apprenticeships. Traditional college degrees often involve 3 to 5 years of tuition and living expenses before entering the workforce.",
+    "answer_mr": "व्यावसायिक शिक्षणात अत्यंत कमी खर्चात १ ते २ वर्षांत प्रशिक्षण पूर्ण होते आणि लगेच शिकाऊ उमेदवारीतून उत्पन्न सुरू होते. पारंपरिक पदवीसाठी ३ ते ५ वर्षे नियमित फी व शिक्षणाचा खर्च करावा लागतो."
+  },
+  {
+    "id": "faq_39",
+    "concern": "vocational vs academic",
+    "keywords_en": ["practical skills vs theory", "hands on", "practical knowledge", "bookish learning"],
+    "keywords_mr": ["प्रत्यक्ष काम की पुस्तकी ज्ञान", "प्रात्यक्षिक ज्ञान", "हाताने काम", "थियरी"],
+    "question": "How does the learning experience differ between vocational training and traditional college?",
+    "answer_en": "In vocational institutions, approximately 70 percent of training time is spent inside workshops working with real tools and machinery, with 30 percent theory. In traditional academic streams, the focus is predominantly on classroom lectures and textbook theory.",
+    "answer_mr": "व्यावसायिक प्रशिक्षणात जवळपास ७०% वेळ प्रत्यक्ष कार्यशाळेत हत्यारे आणि मशिन्सवर काम शिकण्यात जातो आणि ३०% थिअरी असते. कॉलेजमध्ये बहुतांश भर वर्गातील व्याख्याने आणि पुस्तकी ज्ञानावर असतो."
+  },
+  {
+    "id": "faq_40",
+    "concern": "vocational vs academic",
+    "keywords_en": ["can i do both", "combine iti with 12th", "nios 12th after iti", "open school"],
+    "keywords_mr": ["दोन्ही करता येते का", "आयटीआय सोबत १२ वी", "मुक्त विद्यालय", "१२ वी समकक्ष"],
+    "question": "Can a student complete Class 12 equivalence while studying in ITI?",
+    "answer_en": "Yes, through National Institute of Open Schooling (NIOS) or state equivalence frameworks, a student passing a 2-year ITI course can clear designated language papers to receive a recognized Class 12 certificate alongside their National Trade Certificate.",
+    "answer_mr": "होय, राष्ट्रीय मुक्त विद्यालय (NIOS) किंवा राज्य मंडळाच्या नियमांनुसार २ वर्षांचा आयटीआय पूर्ण केलेल्या विद्यार्थ्यांना केवळ भाषेचे पेपर देऊन १२ वी समकक्ष प्रमाणपत्र मिळवण्याची अधिकृत सोय आहे."
+  },
+  {
+    "id": "faq_41",
+    "concern": "what happens after the course",
+    "keywords_en": ["what happens after course", "after iti what next", "next steps", "after passing"],
+    "keywords_mr": ["कोर्स संपल्यावर काय", "आयटीआय नंतर पुढे काय", "पुढील पाऊल", "पास झाल्यावर"],
+    "question": "What are the main options available immediately after completing an ITI course?",
+    "answer_en": "Graduates have four clear routes: 1) join a 1-year paid apprenticeship under NAPS, 2) enter full-time employment as a technician in industry, 3) take lateral entry into the second year of a Polytechnic Diploma, or 4) start a self-employed repair/service venture.",
+    "answer_mr": "आयटीआय पूर्ण झाल्यावर चार मुख्य पर्याय उपलब्ध असतात: १) NAPS अंतर्गत सशुल्क शिकाऊ उमेदवारी (Apprenticeship), २) कारखान्यात तंत्रज्ञ म्हणून थेट नोकरी, ३) थेट पॉलिटेक्निक डिप्लोमाच्या दुसऱ्या वर्षात प्रवेश, किंवा ४) स्वतःचा स्वतंत्र व्यवसाय सुरू करणे."
+  },
+  {
+    "id": "faq_42",
+    "concern": "what happens after the course",
+    "keywords_en": ["how to register for apprenticeship", "apprenticeship portal", "naps portal registration"],
+    "keywords_mr": ["शिकाऊ उमेदवारी नोंदणी", "अप्रेंटिसशिप पोर्टल", "अर्ज कसा करावा"],
+    "question": "How does a student apply for an apprenticeship after ITI?",
+    "answer_en": "Students register on the national apprenticeship portal (apprenticeshipindia.gov.in) with their ITI marksheet and National Trade Certificate (NTC), where companies publish active apprentice vacancies and contracts.",
+    "answer_mr": "विद्यार्थी भारत सरकारच्या अधिकृत शिकाऊ उमेदवारी पोर्टलवर (apprenticeshipindia.gov.in) आपली नोंदणी करतात. तेथे विविध नामांकित कंपन्यांच्या शिकाऊ पदांसाठी थेट अर्ज करता येतो."
+  },
+  {
+    "id": "faq_43",
+    "concern": "what happens after the course",
+    "keywords_en": ["ntc certificate", "dgt national trade certificate", "mark sheet verification"],
+    "keywords_mr": ["एनटीसी प्रमाणपत्र", "गुणपत्रिका", "राष्ट्रीय व्यवसाय प्रमाणपत्र", "प्रमाणपत्र पडताळणी"],
+    "question": "What certificate do students receive upon passing the ITI examination?",
+    "answer_en": "Successful candidates are awarded the National Trade Certificate (NTC) by the Directorate General of Training (DGT), Ministry of Skill Development and Entrepreneurship. This certificate is recognized nationwide and internationally.",
+    "answer_mr": "परीक्षा उत्तीर्ण झाल्यावर भारत सरकारच्या कौशल्य विकास मंत्रालयाकडून (DGT) राष्ट्रीय व्यवसाय प्रमाणपत्र (National Trade Certificate - NTC) दिले जाते. हे प्रमाणपत्र देशभर आणि परदेशातही अधिकृत मानले जाते."
+  },
+  {
+    "id": "faq_44",
+    "concern": "what happens after the course",
+    "keywords_en": ["campus placement", "job fair", "rozgar mela", "iti recruitment drive"],
+    "keywords_mr": ["कॅम्पस प्लेसमेंट", "रोजगार मेळावा", "नोकरी मेळावा", "थेट मुलाखत"],
+    "question": "Do ITIs conduct campus placement drives and job fairs for final year trainees?",
+    "answer_en": "Yes, government and recognized private ITIs regularly host campus interview drives and district Rozgar Melas (job fairs) where leading regional manufacturers and service companies recruit candidates directly.",
+    "answer_mr": "होय, शासकीय व मान्यताप्राप्त खाजगी आयटीआयमध्ये नियमितपणे कॅम्पस मुलाखती आणि रोजगार मेळावे आयोजित केले जातात, जिथे नामांकित कंपन्या विद्यार्थ्यांना थेट नोकरी देतात."
+  },
+  {
+    "id": "faq_45",
+    "concern": "how to reach a human counsellor",
+    "keywords_en": ["human counsellor", "talk to human", "speak to teacher", "real person", "expert counsellor", "contact counsellor"],
+    "keywords_mr": ["मानवी समुपदेशक", "प्रत्यक्ष व्यक्तीशी बोला", "शिक्षकांशी बोला", "तज्ज्ञ समुपदेशक", "समुपदेशकाशी संपर्क"],
+    "question": "How can I speak or connect with a qualified human career counsellor?",
+    "answer_en": "You can connect directly with our expert counsellors by clicking the Human Counsellor link or button in the portal header. Counsellors offer personalized, one-on-one sessions for family decision-making, trade selection, and district seat allocation.",
+    "answer_mr": "पोर्टलवरील समुपदेशक बटणावर क्लिक करून आपण थेट आमच्या तज्ज्ञ मानवी समुपदेशकांशी संपर्क साधू शकता. ते कुटुंबियांसोबत वैयक्तिक चर्चा करून मुलाच्या आवडीनुसार योग्य ट्रेड आणि स्थानिक जागांची खात्रीशीर माहिती देतात."
+  },
+  {
+    "id": "faq_46",
+    "concern": "how to reach a human counsellor",
+    "keywords_en": ["counsellor charges", "is counselling free", "fee for counsellor", "cost of counselling"],
+    "keywords_mr": ["समुपदेशन मोफत आहे का", "समुपदेशन फी", "खर्च समुपदेशक"],
+    "question": "Is the SkillPath human counselling service free for parents and students?",
+    "answer_en": "Yes, the guidance provided through the SkillPath portal desk is free of cost for students and families to help them make confident, pressure-free career choices.",
+    "answer_mr": "होय, कौशल्यमार्ग पोर्टलच्या माध्यमातून दिली जाणारी समुपदेशन सेवा विद्यार्थी व पालकांसाठी पूर्णपणे विनामूल्य आहे, जेणेकरून कुटुंबाला कोणत्याही आर्थिक भाराशिवाय योग्य मार्गदर्शन मिळावे."
+  },
+  {
+    "id": "faq_47",
+    "concern": "how to reach a human counsellor",
+    "keywords_en": ["when to speak with counsellor", "need personalized help", "confused about choices", "special case"],
+    "keywords_mr": ["कधी संपर्क करावा", "गोंधळात असल्यास", "विशेष मदत", "निर्णय घेता येत नाही"],
+    "question": "When is it recommended to consult a human counsellor instead of AI?",
+    "answer_en": "A human counsellor is strongly recommended when family members disagree on career paths, when specific local reservation or quota criteria need clarification, or when a student has unique learning or financial constraints.",
+    "answer_mr": "जेव्हा कुटुंबात करिअरच्या निवडीवरून संभ्रम असतो, आरक्षणाच्या किंवा विशिष्ट प्रवेश नियमांबद्दल खात्री हवी असते, किंवा विद्यार्थ्याला वैयक्तिक मार्गदर्शनाची गरज असते, तेव्हा प्रत्यक्ष मानवी समुपदेशकांशी बोलणे फायदेशीर ठरते."
+  },
+  {
+    "id": "faq_48",
+    "concern": "how to reach a human counsellor",
+    "keywords_en": ["iti visit", "visit local iti", "counselling at iti", "meet principal"],
+    "keywords_mr": ["आयटीआयला भेट", "स्थानिक आयटीआय", "प्राचार्यांना भेटा", "थेट भेट"],
+    "question": "Can parents visit their local Government ITI to see facilities before applying?",
+    "answer_en": "Yes, parents and students are welcomed to visit their nearest Government ITI on working days. You can inspect the workshops, speak with trade instructors, and observe real practical training underway.",
+    "answer_mr": "होय, पालक व विद्यार्थी कामकाजाच्या दिवशी जवळच्या शासकीय आयटीआयला थेट भेट देऊ शकतात. तेथील प्रत्यक्ष कार्यशाळा पाहू शकतात आणि शिल्प निदेशकांशी चर्चा करून निर्णय घेऊ शकतात."
+  }
+]
