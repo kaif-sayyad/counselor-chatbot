@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkillPath AI Counsellor</title>
-  <meta name="description" content="Simple AI career counsellor for vocational education and skill-based careers.">
+  <meta name="description" content="AI career counsellor for vocational education and skill-based careers in India.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Top Tricolour Accent Strip -->
+
+  <!-- Tricolour accent strip -->
   <div class="tricolour-strip" aria-hidden="true">
     <div class="strip-orange"></div>
     <div class="strip-white"></div>
@@ -19,40 +20,34 @@
   </div>
 
   <div class="chat-container">
-    <!-- Clean Header: Branding & Linguistic Option -->
+
+    <!-- Header: branding + language toggle + new chat -->
     <header class="chat-header">
       <div class="header-branding">
-        <div class="header-title-row">
-          <h1 id="header-title">SkillPath AI Counsellor</h1>
-          <span class="header-badge badge-offline" id="header-badge" aria-label="System mode">Checking...</span>
-        </div>
+        <h1 id="header-title">SkillPath AI Counsellor</h1>
         <p id="header-subtitle">Vocational &amp; Skill Career Guidance</p>
       </div>
       <div class="header-actions">
-        <!-- Linguistic Toggle -->
         <button type="button" class="btn-lang" id="btn-lang-toggle" aria-label="Switch language">
           🌐 <span id="lang-toggle-text">मराठी</span>
         </button>
-        <!-- New Chat -->
         <button type="button" class="btn-clear" id="btn-new-chat" title="New Chat" aria-label="Start new conversation">
           🔄
         </button>
       </div>
     </header>
 
-    <!-- Message Area -->
-    <main class="chat-messages" id="messages-container" role="log" aria-live="polite">
-      <!-- Conversation bubbles will be added here -->
-    </main>
+    <!-- Messages -->
+    <main class="chat-messages" id="messages-container" role="log" aria-live="polite"></main>
 
-    <!-- Typing Indicator -->
-    <div class="typing-indicator hidden" id="typing-indicator" aria-label="Typing">
+    <!-- Typing indicator -->
+    <div class="typing-indicator hidden" id="typing-indicator" aria-label="Thinking">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
 
-    <!-- User Input Area -->
+    <!-- Input area -->
     <footer class="chat-footer">
       <form class="chat-form" id="chat-form" autocomplete="off">
         <input
@@ -64,18 +59,15 @@
           aria-label="Your question"
           required
         />
-        <button type="button" class="btn-voice" id="btn-voice" title="Voice Input" aria-label="Voice input">
-          🎙️
-        </button>
         <button type="submit" class="btn-send" id="btn-send" aria-label="Send">
-          <span id="send-btn-text">Send</span>
-          <span aria-hidden="true">➤</span>
+          <span id="send-btn-text">Send</span> <span aria-hidden="true">➤</span>
         </button>
       </form>
       <p class="disclaimer" id="disclaimer-text">
         AI answers are general guidance. For verified figures see the portal's data screens.
       </p>
     </footer>
+
   </div>
 
   <script src="app.js"></script>
